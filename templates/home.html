@@ -33,23 +33,7 @@
             
             <div>
                 {% for job in jobs %}
-                    <div>
-
-                        <h4 style="color:rgb(120, 120, 120)">
-                            {{job['title']}}
-                        </h4>
-
-                        {% if 'salary' in job %}
-                            <div>
-                                <b>Salary:</b>{{job['salary']}}
-                            </div>
-                        {% endif %}
-
-                        <div class="mb-4">
-                            <b>Location:</b>{{job['location']}}
-                        </div>
-                        
-                    </div>
+                        {% include 'jobitem.html' %}
                 {% endfor %}
             </div>
 
